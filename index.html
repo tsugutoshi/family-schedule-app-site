@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Family Schedule App - アプリ概要</title>
+    <meta name="description" content="家族みんなの予定やタスクを一元管理し、AIがサポートするスケジュールアプリ。" />
+    <style>
+      body {
+        font-family: "Noto Sans JP", system-ui, sans-serif;
+        color: #1f2933;
+        background: #f8fafc;
+        line-height: 1.7;
+        margin: 0;
+        padding: 48px 16px;
+      }
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+        padding: 48px;
+      }
+      h1 {
+        font-size: 2.4rem;
+        margin-bottom: 16px;
+        color: #0f172a;
+      }
+      h2 {
+        font-size: 1.6rem;
+        margin-top: 40px;
+        margin-bottom: 16px;
+        color: #0f172a;
+        border-left: 6px solid #6366f1;
+        padding-left: 12px;
+      }
+      p {
+        margin: 0 0 20px;
+      }
+      ul {
+        margin: 0 0 32px 24px;
+        padding: 0;
+      }
+      li {
+        margin-bottom: 12px;
+      }
+      .cta {
+        background: #6366f1;
+        color: #fff;
+        padding: 24px;
+        border-radius: 16px;
+        text-align: center;
+        margin-top: 48px;
+      }
+      .cta strong {
+        display: block;
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+      }
+      @media (max-width: 640px) {
+        main {
+          padding: 32px 24px;
+        }
+        h1 {
+          font-size: 2rem;
+        }
+        h2 {
+          font-size: 1.4rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Family Schedule App</h1>
+      <p>
+        <strong>Family Schedule App</strong> は、家族全員の予定・タスク・コミュニケーションをまとめて管理できる
+        Flutter 製のクロスプラットフォームアプリです。AI がホワイトボードやディスカッションの内容を解析し、
+        実行可能なタスクやイベントを自動で抽出。参加メンバーの割り当て、リマインド、情報共有をスマートに支援します。
+      </p>
+
+      <h2>主な機能</h2>
+      <ul>
+        <li>
+          <strong>ホワイトボード</strong>：
+          家族会議の議事録やアイデアをリアルタイム編集。自動保存・リンク検出で情報整理もスムーズ。
+        </li>
+        <li>
+          <strong>ディスカッション</strong>：
+          コメントで意見交換。投稿内の URL は自動的にリンク化され、ワンタップで参照できます。
+        </li>
+        <li>
+          <strong>AI分析</strong>：
+          Gemini API を利用してタスク・イベントを抽出。必ず具体的なタスクを生成し、必要に応じて家族全員を関係者に追加。
+        </li>
+        <li>
+          <strong>チェックリスト管理</strong>：
+          テンプレート作成、AI 生成、担当者アサインなどで ToDo を柔軟に運用。
+        </li>
+        <li>
+          <strong>通知と既読管理</strong>：
+          Firebase Cloud Messaging によるプッシュ通知、既読状況の可視化で情報の取りこぼしを防止。
+        </li>
+        <li>
+          <strong>マルチプラットフォーム対応</strong>：
+          Flutter × Firebase で iOS / Android に同時展開。Firestore／Functions／Auth 等を活用。
+        </li>
+      </ul>
+
+      <h2>AIサポートの活用例</h2>
+      <ul>
+        <li>
+          ホワイトボード＋ディスカッション内容から「決定事項」や「チェックリスト」をワンクリック生成。
+        </li>
+        <li>
+          タスク抽出ダイアログで期日・担当者・関連イベントを自動設定。抽出結果はクラウドに即反映。
+        </li>
+        <li>
+          AI とのチャットで議題整理やアクションプランの相談が可能。
+        </li>
+      </ul>
+
+      <h2>技術スタック</h2>
+      <ul>
+        <li>Flutter（Material 3 対応 UI）</li>
+        <li>Firebase（Auth / Firestore / Cloud Functions / Cloud Messaging / Storage）</li>
+        <li>Google Gemini API（AI解析・チャット）</li>
+        <li>Stripe 連携や広告バナーなどのマネタイズ基盤</li>
+      </ul>
+
+      <div class="cta">
+        <strong>家族の予定もタスクも、もっとスムーズに。</strong>
+        今日から Family Schedule App で、みんなの「やること」と「やりたいこと」を一元管理しましょう。
+      </div>
+    </main>
+  </body>
+</html>
