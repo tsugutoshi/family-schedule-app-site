@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Family Schedule App - アプリ概要</title>
-    <meta name="description" content="家族みんなの予定やタスクを一元管理し、AIがサポートするスケジュールアプリ。" />
+    <meta name="description" content="家族の予定やタスクを一元管理し、AIがサポートするスケジュールアプリ。" />
     <style>
       body {
         font-family: "Noto Sans JP", system-ui, sans-serif;
@@ -52,10 +52,15 @@
         text-align: center;
         margin-top: 48px;
       }
-      .cta strong {
-        display: block;
-        font-size: 1.4rem;
-        margin-bottom: 8px;
+      .legal-box {
+        background: #f1f5f9;
+        padding: 32px;
+        border-radius: 16px;
+        margin-top: 48px;
+        border-left: 6px solid #6366f1;
+      }
+      .legal-box p {
+        margin-bottom: 12px;
       }
       @media (max-width: 640px) {
         main {
@@ -73,6 +78,7 @@
   <body>
     <main>
       <h1>Family Schedule App</h1>
+
       <p>
         <strong>Family Schedule App</strong> は、家族全員の予定・タスク・コミュニケーションをまとめて管理できる
         Flutter 製のクロスプラットフォームアプリです。AI がホワイトボードやディスカッションの内容を解析し、
@@ -81,57 +87,50 @@
 
       <h2>主な機能</h2>
       <ul>
-        <li>
-          <strong>ホワイトボード</strong>：
-          家族会議の議事録やアイデアをリアルタイム編集。自動保存・リンク検出で情報整理もスムーズ。
-        </li>
-        <li>
-          <strong>ディスカッション</strong>：
-          コメントで意見交換。投稿内の URL は自動的にリンク化され、ワンタップで参照できます。
-        </li>
-        <li>
-          <strong>AI分析</strong>：
-          Gemini API を利用してタスク・イベントを抽出。必ず具体的なタスクを生成し、必要に応じて家族全員を関係者に追加。
-        </li>
-        <li>
-          <strong>チェックリスト管理</strong>：
-          テンプレート作成、AI 生成、担当者アサインなどで ToDo を柔軟に運用。
-        </li>
-        <li>
-          <strong>通知と既読管理</strong>：
-          Firebase Cloud Messaging によるプッシュ通知、既読状況の可視化で情報の取りこぼしを防止。
-        </li>
-        <li>
-          <strong>マルチプラットフォーム対応</strong>：
-          Flutter × Firebase で iOS / Android に同時展開。Firestore／Functions／Auth 等を活用。
-        </li>
+        <li><strong>ホワイトボード</strong>：議事録やアイデアをリアルタイム共有。</li>
+        <li><strong>ディスカッション</strong>：コメントで意見交換・URL自動リンク化。</li>
+        <li><strong>AI分析</strong>：Gemini API でタスク・イベントを自動抽出。</li>
+        <li><strong>チェックリスト管理</strong>：AI生成、テンプレート対応、担当者アサイン。</li>
+        <li><strong>通知と既読管理</strong>：FCMによる通知と既読表示。</li>
+        <li><strong>マルチプラットフォーム</strong>：Flutter × Firebase による iOS / Android 対応。</li>
       </ul>
 
-      <h2>AIサポートの活用例</h2>
+      <h2>AIサポート活用例</h2>
       <ul>
-        <li>
-          ホワイトボード＋ディスカッション内容から「決定事項」や「チェックリスト」をワンクリック生成。
-        </li>
-        <li>
-          タスク抽出ダイアログで期日・担当者・関連イベントを自動設定。抽出結果はクラウドに即反映。
-        </li>
-        <li>
-          AI とのチャットで議題整理やアクションプランの相談が可能。
-        </li>
+        <li>ホワイトボード＋ディスカッションから「決定事項」や「チェックリスト」を生成。</li>
+        <li>タスク抽出時に期日・担当者・イベントを自動提案。</li>
+        <li>AIとのチャットで議題整理やアクションプランの作成が可能。</li>
       </ul>
 
       <h2>技術スタック</h2>
       <ul>
-        <li>Flutter（Material 3 対応 UI）</li>
-        <li>Firebase（Auth / Firestore / Cloud Functions / Cloud Messaging / Storage）</li>
-        <li>Google Gemini API（AI解析・チャット）</li>
-        <li>Stripe 連携や広告バナーなどのマネタイズ基盤</li>
+        <li>Flutter（Material 3）</li>
+        <li>Firebase（Auth / Firestore / Cloud Functions / Messaging / Storage）</li>
+        <li>Google Gemini API（AI解析）</li>
+        <li>Stripe / 広告によるマネタイズ対応</li>
       </ul>
 
       <div class="cta">
         <strong>家族の予定もタスクも、もっとスムーズに。</strong>
-        今日から Family Schedule App で、みんなの「やること」と「やりたいこと」を一元管理しましょう。
+        今日から Family Schedule App で、みんなのやることを一元管理しましょう。
       </div>
+
+      <h2>特定商取引法に基づく表記</h2>
+      <div class="legal-box">
+        <p><strong>販売事業者名：</strong>戸田 次俊（個人事業主）</p>
+        <p><strong>所在地：</strong>東京都江戸川区中葛西７−４−１８</p>
+        <p><strong>メールアドレス：</strong>orubisu.io3@gmail.com</p>
+        <p><strong>提供するサービス：</strong>FamSync（追加機能の月額サブスクリプション）</p>
+        <p><strong>販売価格：</strong>アプリ内の購入画面に表示  
+        （ファミリープラン 月額 480円）</p>
+        <p><strong>支払方法：</strong>クレジットカード（Stripe決済）</p>
+        <p><strong>支払時期：</strong>購入時に即時決済</p>
+        <p><strong>サービス提供時期：</strong>購入後すぐ利用可能</p>
+        <p><strong>返品・キャンセル：</strong>性質上返金不可。サブスクはいつでも解約・無料プランへ変更可能。</p>
+        <p><strong>動作環境：</strong>iOS / Android（ストアの動作条件に準拠）</p>
+        <p><strong>追加の費用：</strong>通信料はお客様負担。</p>
+      </div>
+
     </main>
   </body>
 </html>
