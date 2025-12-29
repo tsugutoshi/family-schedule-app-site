@@ -1,175 +1,203 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <title>プライバシーポリシー | FamSync</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        "Hiragino Sans", "Noto Sans JP", sans-serif;
-      background: #f3f4f7;
-      color: #222;
-      line-height: 1.8;
-    }
-    .page {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 40px 16px 80px;
-    }
-    h1 {
-      font-size: 28px;
-      margin-bottom: 8px;
-    }
-    h2 {
-      font-size: 20px;
-      margin: 32px 0 8px;
-      border-left: 4px solid #4f46e5;
-      padding-left: 8px;
-    }
-    h3 {
-      font-size: 16px;
-      margin: 16px 0 4px;
-    }
-    p {
-      margin: 0 0 12px;
-    }
-    ul {
-      margin: 0 0 12px 20px;
-      padding: 0;
-    }
-    .card {
-      background: #fff;
-      border-radius: 12px;
-      padding: 24px 20px;
-      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
-    }
-    .muted {
-      color: #6b7280;
-      font-size: 13px;
-    }
-    a {
-      color: #2563eb;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プライバシーポリシー - FamSync</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background-color: #f5f7fa;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        header {
+            background: linear-gradient(135deg, #CBD9F4 0%, #a8c0e8 100%);
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+        }
+        header h1 { color: #2c3e50; font-size: 1.8rem; margin-bottom: 10px; }
+        header p { color: #4a5568; font-size: 1rem; }
+        .app-name { font-weight: bold; color: #3182ce; }
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+        h2 {
+            color: #2c3e50;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #CBD9F4;
+        }
+        h3 { color: #4a5568; font-size: 1.1rem; margin: 20px 0 10px 0; }
+        p { margin-bottom: 15px; }
+        ul, ol { margin-left: 20px; margin-bottom: 15px; }
+        li { margin-bottom: 8px; }
+        .highlight {
+            background-color: #e8f4fd;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #3182ce;
+            margin: 15px 0;
+        }
+        .warning {
+            background-color: #fff5f5;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #e53e3e;
+            margin: 15px 0;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        .data-table th, .data-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .data-table th {
+            background-color: #f7fafc;
+            font-weight: 600;
+            color: #4a5568;
+        }
+        footer { text-align: center; padding: 30px; color: #718096; font-size: 0.9rem; }
+        a { color: #3182ce; }
+        @media (max-width: 600px) {
+            .container { padding: 20px 15px; }
+            header h1 { font-size: 1.5rem; }
+            .card { padding: 20px; }
+            .data-table { font-size: 0.9rem; }
+            .data-table th, .data-table td { padding: 8px; }
+        }
+    </style>
 </head>
 <body>
-  <main class="page">
-    <header style="margin-bottom: 24px">
-      <h1>FamSync プライバシーポリシー</h1>
-      <p class="muted">
-        本プライバシーポリシーは、家族向けスケジュール／タスク／掲示板アプリ
-        「FamSync」（以下「本アプリ」）におけるユーザー情報の取扱いについて定めるものです。
-      </p>
+    <header>
+        <h1>プライバシーポリシー</h1>
+        <p><span class="app-name">FamSync</span> - 家族向けスケジュール管理アプリ</p>
     </header>
 
-    <section class="card">
-      <h2>1. 基本方針</h2>
-      <p>
-        本アプリは、ユーザーのプライバシーを尊重し、個人情報の保護に関する法令およびガイドラインを遵守します。
-        取得する情報は、サービス提供に必要な範囲に限定し、目的外利用を行いません。
-      </p>
+    <div class="container">
+        <div class="card">
+            <h2>1. 基本方針</h2>
+            <p>
+                FamSync（以下「本アプリ」）は、ユーザーのプライバシーを尊重し、個人情報保護に関する法令およびガイドラインを遵守します。
+                本ポリシーでは、本アプリが取得する情報、その利用目的、第三者提供、ユーザーの権利等について説明します。
+            </p>
+        </div>
 
-      <h2>2. 取得する情報</h2>
-      <h3>アカウント情報</h3>
-      <ul>
-        <li>メールアドレス</li>
-        <li>表示名・プロフィール画像 など</li>
-      </ul>
+        <div class="card">
+            <h2>2. 取得する情報</h2>
+            <table class="data-table">
+                <thead>
+                    <tr><th>カテゴリ</th><th>具体的な項目</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>アカウント情報</td>
+                        <td>メールアドレス、表示名、プロフィール画像 など</td>
+                    </tr>
+                    <tr>
+                        <td>アプリ内データ</td>
+                        <td>予定・タスク・掲示板投稿・家族グループ情報・アップロードした写真 など</td>
+                    </tr>
+                    <tr>
+                        <td>端末情報</td>
+                        <td>デバイスID（広告ID・FirebaseインスタンスID等）、OS種別・バージョン、アプリバージョン など</td>
+                    </tr>
+                    <tr>
+                        <td>ログ情報</td>
+                        <td>操作ログ、クラッシュログ、エラーログ など</td>
+                    </tr>
+                    <tr>
+                        <td>決済関連情報</td>
+                        <td>サブスクリプション状態、課金プラン種別（Stripe / App Store）、決済ID（アプリ側にはカード番号等は保持しません）</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
-      <h3>アプリ内データ</h3>
-      <ul>
-        <li>予定・タスク・チェックリスト</li>
-        <li>掲示板の投稿内容・添付画像</li>
-        <li>家族グループ情報・招待コード 等</li>
-      </ul>
+        <div class="card">
+            <h2>3. 利用目的</h2>
+            <ul>
+                <li>本アプリの提供・運営・改善のため</li>
+                <li>家族間でのスケジュール・タスク・写真等の共有機能を提供するため</li>
+                <li>不具合対応・セキュリティ対策・利用状況の把握のため</li>
+                <li>サブスクリプション課金の管理、請求、確認のため</li>
+                <li>重要なお知らせ・サポート対応のため</li>
+                <li>広告配信・効果測定（Google AdMob等を利用する場合）</li>
+            </ul>
+        </div>
 
-      <h3>端末・ログ情報</h3>
-      <ul>
-        <li>デバイスID（広告ID・FirebaseインスタンスID等）</li>
-        <li>OS種別・バージョン、アプリバージョン</li>
-        <li>クラッシュレポート・アクセスログ など</li>
-      </ul>
+        <div class="card">
+            <h2>4. 第三者提供・委託</h2>
+            <p>
+                本アプリは、以下の目的で外部サービスを利用します。これらのサービス提供者に対して、必要最小限のデータが送信される場合があります。
+            </p>
+            <ul>
+                <li>Firebase（認証、データベース、ストレージ、クラッシュレポート 等）</li>
+                <li>Google Cloud Messaging / Firebase Cloud Messaging（プッシュ通知）</li>
+                <li>Google AdMob（広告配信）</li>
+                <li>Stripe / App Storeの決済システム（サブスクリプション決済）</li>
+            </ul>
+            <p>
+                法令に基づく場合を除き、ユーザーの同意なく第三者へ個人情報を販売・貸与することはありません。
+            </p>
+        </div>
 
-      <h3>決済関連情報</h3>
-      <ul>
-        <li>サブスクリプション種別（ベーシック／ファミリープラン等）</li>
-        <li>課金状態を識別するためのトークンや請求ID</li>
-      </ul>
-      <p class="muted">
-        ※ クレジットカード番号などの機微な決済情報は、Stripe や App Store 等の決済事業者が管理し、本アプリのサーバーでは保持しません。
-      </p>
+        <div class="card">
+            <h2>5. データの保存期間</h2>
+            <p>
+                ユーザーのデータは、アカウントが有効である期間および法令上必要な期間に限り保存します。
+                ユーザーがアカウント削除またはデータ削除をリクエストした場合、合理的な期間内（通常30日以内）に削除します。
+            </p>
+        </div>
 
-      <h2>3. 利用目的</h2>
-      <ul>
-        <li>本アプリの提供・運営・機能改善のため</li>
-        <li>家族間でのスケジュール・タスク・写真・掲示板の共有のため</li>
-        <li>不具合対応やセキュリティ対策のため</li>
-        <li>サブスクリプション課金の管理・確認のため</li>
-        <li>お知らせ・サポート対応のため</li>
-        <li>広告配信および効果測定（広告を有効にしている場合）</li>
-      </ul>
+        <div class="card">
+            <h2>6. ユーザーによるデータ管理</h2>
+            <ul>
+                <li>アプリ内の設定画面から、アカウント情報・一部データを編集・削除できます。</li>
+                <li>データ削除の詳細な手順は、<a href="./data-deletion.html">データ削除リクエストページ</a>をご覧ください。</li>
+                <li>広告IDのリセットやトラッキング制限は、端末のOS設定から行うことができます。</li>
+            </ul>
+        </div>
 
-      <h2>4. 外部サービスの利用</h2>
-      <p>本アプリでは、以下の外部サービスを利用する場合があります。</p>
-      <ul>
-        <li>Firebase（認証 / Firestore / Storage / Functions / Crashlytics 等）</li>
-        <li>Firebase Cloud Messaging（プッシュ通知）</li>
-        <li>Google AdMob（広告配信）</li>
-        <li>Stripe / App Store（サブスクリプション決済）</li>
-      </ul>
-      <p>
-        これらのサービス提供者に対して、サービス提供に必要な範囲でユーザー情報が送信されることがありますが、
-        法令に基づく場合を除き、ユーザーの同意なく第三者へ販売・貸与することはありません。
-      </p>
+        <div class="card">
+            <h2>7. セキュリティ</h2>
+            <p>
+                本アプリは、通信の暗号化（HTTPS/TLS）やアクセス制御等の技術的・組織的安全対策を講じ、ユーザーデータの保護に努めます。
+                ただし、インターネット上の通信特性上、完全な安全性を保証するものではありません。
+            </p>
+        </div>
 
-      <h2>5. データの保存期間と削除</h2>
-      <p>
-        ユーザーのデータは、アカウントが有効な期間および法令上必要な期間に限り保存します。
-        ユーザーがアカウント削除やデータ削除を希望する場合、合理的な期間内に削除対応を行います。
-      </p>
-      <p>
-        具体的な削除手順や保持期間については、以下のページも併せてご確認ください：<br />
-        <a href="https://tsugutoshi.github.io/family-schedule-app/data-deletion.html"
-          >データ削除リクエストページ</a
-        >
-      </p>
+        <div class="card">
+            <h2>8. プライバシーポリシーの変更</h2>
+            <p>
+                本ポリシーの内容は、必要に応じて改定されることがあります。重要な変更がある場合は、アプリ内のお知らせ等を通じて周知します。
+            </p>
+        </div>
 
-      <h2>6. ユーザーの権利</h2>
-      <ul>
-        <li>ご自身の登録情報の確認・修正・削除を行う権利</li>
-        <li>サポート窓口への問い合わせによるデータ削除リクエスト</li>
-        <li>端末設定による広告IDのリセット・トラッキングの制限</li>
-      </ul>
+        <div class="card">
+            <h2>9. お問い合わせ</h2>
+            <p>本ポリシーおよび個人情報の取り扱いに関するお問い合わせは、以下までご連絡ください。</p>
+            <ul>
+                <li>メールアドレス: <a href="mailto:orubisu.io3@gmail.com">orubisu.io3@gmail.com</a></li>
+            </ul>
+        </div>
+    </div>
 
-      <h2>7. セキュリティ</h2>
-      <p>
-        通信には HTTPS/TLS による暗号化を用い、不正アクセスや情報漏えいの防止に努めます。
-        ただし、インターネットの性質上、完全な安全性を保証するものではありません。
-      </p>
-
-      <h2>8. プライバシーポリシーの変更</h2>
-      <p>
-        本ポリシーの内容は、法令改正やサービス内容の変更に応じて更新されることがあります。
-        重要な変更がある場合は、アプリ内のお知らせ等で通知します。
-      </p>
-
-      <h2>9. お問い合わせ</h2>
-      <p>本ポリシーおよび個人情報の取扱いに関するお問い合わせは、以下までご連絡ください。</p>
-      <ul>
-        <li>メールアドレス: <a href="mailto:orubisu.io3@gmail.com">orubisu.io3@gmail.com</a></li>
-      </ul>
-
-      <p class="muted">
-        制定日: 2025年12月13日<br />
-        最終更新日: 2025年12月13日
-      </p>
-    </section>
-  </main>
+    <footer>
+        <p>&copy; 2024-2025 FamSync. All rights reserved.</p>
+        <p>最終更新日: 2025年12月13日</p>
+    </footer>
 </body>
 </html>
