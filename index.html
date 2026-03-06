@@ -2,8 +2,9 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <title>Family Schedule App - アプリ概要</title>
-    <meta name="description" content="家族の予定やタスクを一元管理し、AIがサポートするスケジュールアプリ。" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>アプリ一覧 - FamSync / Rezo</title>
+    <meta name="description" content="FamSync と Rezo — 家族の予定・写真・掲示板をひとつにまとめるアプリと、AI冷蔵庫管理アプリ。" />
     <style>
       body {
         font-family: "Noto Sans JP", system-ui, sans-serif;
@@ -16,11 +17,53 @@
       main {
         max-width: 960px;
         margin: 0 auto;
+      }
+
+      /* ── ナビゲーション ── */
+      .app-nav {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        margin-bottom: 32px;
+        flex-wrap: wrap;
+      }
+      .app-nav a {
+        display: inline-block;
+        padding: 10px 24px;
+        border-radius: 24px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: all 0.2s;
+      }
+      .app-nav a.nav-famsync {
+        background: #eef2ff;
+        color: #6366f1;
+        border: 2px solid #6366f1;
+      }
+      .app-nav a.nav-famsync:hover {
+        background: #6366f1;
+        color: #fff;
+      }
+      .app-nav a.nav-rezo {
+        background: #f0fdf4;
+        color: #16a34a;
+        border: 2px solid #16a34a;
+      }
+      .app-nav a.nav-rezo:hover {
+        background: #16a34a;
+        color: #fff;
+      }
+
+      /* ── カードセクション ── */
+      .app-card {
         background: #fff;
         border-radius: 18px;
         box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
         padding: 48px;
+        margin-bottom: 40px;
       }
+
       h1 {
         font-size: 2.4rem;
         margin-bottom: 16px;
@@ -31,105 +74,205 @@
         margin-top: 40px;
         margin-bottom: 16px;
         color: #0f172a;
-        border-left: 6px solid #6366f1;
         padding-left: 12px;
       }
-      p {
-        margin: 0 0 20px;
-      }
-      ul {
-        margin: 0 0 32px 24px;
-        padding: 0;
-      }
-      li {
-        margin-bottom: 12px;
-      }
+
+      /* アクセントカラー切り替え */
+      .accent-indigo h2 { border-left: 6px solid #6366f1; }
+      .accent-green h2  { border-left: 6px solid #16a34a; }
+
+      p { margin: 0 0 20px; }
+      ul { margin: 0 0 32px 24px; padding: 0; }
+      li { margin-bottom: 12px; }
+
       .cta {
-        background: #6366f1;
         color: #fff;
         padding: 24px;
         border-radius: 16px;
         text-align: center;
         margin-top: 48px;
       }
+      .cta-indigo { background: #6366f1; }
+      .cta-green  { background: #16a34a; }
+
+      .legal-card {
+        background: #fff;
+        border-radius: 18px;
+        box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+        padding: 48px;
+      }
       .legal-box {
         background: #f1f5f9;
         padding: 32px;
         border-radius: 16px;
-        margin-top: 48px;
+        margin-top: 24px;
         border-left: 6px solid #6366f1;
       }
-      .legal-box p {
-        margin-bottom: 12px;
+      .legal-box p { margin-bottom: 12px; }
+
+      .store-buttons {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        margin-top: 20px;
+        flex-wrap: wrap;
       }
+      .store-btn {
+        display: inline-block;
+        padding: 14px 28px;
+        border-radius: 12px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.2s;
+      }
+      .store-btn.ios {
+        background: #fff;
+        color: #0f172a;
+      }
+      .store-btn.ios:hover {
+        background: #e2e8f0;
+      }
+      .store-btn.android {
+        background: #fff;
+        color: #0f172a;
+      }
+      .store-btn.android:hover {
+        background: #e2e8f0;
+      }
+
       @media (max-width: 640px) {
-        main {
-          padding: 32px 24px;
-        }
-        h1 {
-          font-size: 2rem;
-        }
-        h2 {
-          font-size: 1.4rem;
-        }
+        .app-card, .legal-card { padding: 32px 24px; }
+        h1 { font-size: 2rem; }
+        h2 { font-size: 1.4rem; }
+        .store-btn { padding: 12px 20px; font-size: 0.9rem; }
       }
     </style>
   </head>
   <body>
     <main>
-      <h1>Family Schedule App</h1>
 
-      <p>
-        <strong>Family Schedule App</strong> は、家族全員の予定・タスク・コミュニケーションをまとめて管理できる
-        Flutter 製のクロスプラットフォームアプリです。AI がホワイトボードやディスカッションの内容を解析し、
-        実行可能なタスクやイベントを自動で抽出。参加メンバーの割り当て、リマインド、情報共有をスマートに支援します。
-      </p>
+      <!-- ナビゲーション -->
+      <nav class="app-nav">
+        <a class="nav-famsync" href="#famsync">📅 FamSync</a>
+        <a class="nav-rezo" href="#rezo">🥬 Rezo</a>
+      </nav>
 
-      <h2>主な機能</h2>
-      <ul>
-        <li><strong>ホワイトボード</strong>：議事録やアイデアをリアルタイム共有。</li>
-        <li><strong>ディスカッション</strong>：コメントで意見交換・URL自動リンク化。</li>
-        <li><strong>AI分析</strong>：Gemini API でタスク・イベントを自動抽出。</li>
-        <li><strong>チェックリスト管理</strong>：AI生成、テンプレート対応、担当者アサイン。</li>
-        <li><strong>通知と既読管理</strong>：FCMによる通知と既読表示。</li>
-        <li><strong>マルチプラットフォーム</strong>：Flutter × Firebase による iOS / Android 対応。</li>
-      </ul>
+      <!-- ═══════════════════════════════════════════
+           Family Schedule App
+           ═══════════════════════════════════════════ -->
+      <section id="famsync" class="app-card accent-indigo">
+        <h1>FamSync（家族カレンダー＆共有）</h1>
 
-      <h2>AIサポート活用例</h2>
-      <ul>
-        <li>ホワイトボード＋ディスカッションから「決定事項」や「チェックリスト」を生成。</li>
-        <li>タスク抽出時に期日・担当者・イベントを自動提案。</li>
-        <li>AIとのチャットで議題整理やアクションプランの作成が可能。</li>
-      </ul>
+        <p>
+          <strong>FamSync</strong> は、家族の予定や写真、掲示板のやり取りをひとつにまとめる家族向けアプリです。
+          AIの要約やイベント抽出で、面倒な整理もすっきり。
+          Flutter × Firebase によるクロスプラットフォーム（iOS / Android）対応です。
+        </p>
 
-      <h2>技術スタック</h2>
-      <ul>
-        <li>Flutter（Material 3）</li>
-        <li>Firebase（Auth / Firestore / Cloud Functions / Messaging / Storage）</li>
-        <li>Google Gemini API（AI解析）</li>
-        <li>Stripe / 広告によるマネタイズ対応</li>
-      </ul>
+        <h2>主な機能</h2>
+        <ul>
+          <li><strong>家族カレンダー</strong>：家族の予定・行事を色分け表示。誕生日・祝日なども見やすく整理。</li>
+          <li><strong>写真共有</strong>：高画質写真を家族で共有（HEIC対応・自動サムネイル生成）。</li>
+          <li><strong>掲示板・コメント</strong>：日々の連絡や相談をスレッド形式で管理。</li>
+          <li><strong>タスク・チェックリスト</strong>：買い物や支度の抜け漏れ防止に。期限超過は赤強調表示。</li>
+          <li><strong>通知</strong>：作成・更新・リマインドのプッシュ通知（FCM）。</li>
+          <li><strong>AI活用（無料範囲）</strong>：掲示板コメントの要点整理、テキストからイベント抽出など。</li>
+        </ul>
 
-      <div class="cta">
-        <strong>家族の予定もタスクも、もっとスムーズに。</strong>
-        今日から Family Schedule App で、みんなのやることを一元管理しましょう。
-      </div>
+        <h2>プランについて</h2>
+        <ul>
+          <li><strong>ベーシックプラン（無料）</strong>：家族人数上限 3 名。基本的な利用が可能。</li>
+          <li><strong>ファミリープラン（月額 480 円）</strong>：家族人数上限 5 名。家族での共有・AI分析の主要機能が利用可能。</li>
+          <li><strong>プレミアムプラン（準備中）</strong>：現在は購入できません。</li>
+        </ul>
 
-      <h2>特定商取引法に基づく表記</h2>
-      <div class="legal-box">
-        <p><strong>販売事業者名：</strong>戸田 次俊（個人事業主）</p>
-        <p><strong>所在地：</strong>東京都江戸川区中葛西７−４−１８</p>
-        <p><strong>メールアドレス：</strong>orubisu.io3@gmail.com</p>
-        <p><strong>提供するサービス：</strong>FamSync（追加機能の月額サブスクリプション）</p>
-        <p><strong>販売価格：</strong>アプリ内の購入画面に表示  
-        （ファミリープラン 月額 480円）</p>
-        <p><strong>支払方法：</strong>クレジットカード（Stripe決済）</p>
-        <p><strong>支払時期：</strong>購入時に即時決済</p>
-        <p><strong>サービス提供時期：</strong>購入後すぐ利用可能</p>
-        <p><strong>返品・キャンセル：</strong>性質上返金不可。サブスクはいつでも解約・無料プランへ変更可能。</p>
-        <p><strong>動作環境：</strong>iOS / Android（ストアの動作条件に準拠）</p>
-        <p><strong>追加の費用：</strong>通信料はお客様負担。</p>
-      </div>
+        <h2>技術スタック</h2>
+        <ul>
+          <li>Flutter（Material 3）</li>
+          <li>Firebase（Auth / Firestore / Cloud Functions / Messaging / Storage）</li>
+          <li>Google Gemini API（AI要約・イベント抽出）</li>
+          <li>Stripe / Google Play / App Store 決済対応</li>
+        </ul>
+
+        <div class="cta cta-indigo">
+          <strong>家族の予定も写真も連絡も、ひとつにまとめよう。</strong><br />
+          FamSync で、家族のスケジュール管理をもっとスマートに。
+          <div class="store-buttons">
+            <a href="https://apps.apple.com/jp/app/famsync/id6756513127" class="store-btn ios">🍎 App Store</a>
+            <a href="https://play.google.com/store/apps/details?id=com.tsugutoshi.famschedule" class="store-btn android">▶ Google Play</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════
+           Rezo
+           ═══════════════════════════════════════════ -->
+      <section id="rezo" class="app-card accent-green">
+        <h1>🥬 Rezo — 冷蔵庫の管理者</h1>
+
+        <p>
+          <strong>Rezo</strong> は、冷蔵庫の在庫管理・レシピ提案・買い物最適化を AI で実現する
+          パーソナル・シェフアプリです。カメラで食材をスキャンするだけで在庫を登録し、
+          賞味期限の通知やレシピの自動提案でフードロスを削減します。
+        </p>
+
+        <h2>主な機能</h2>
+        <ul>
+          <li><strong>AI 食材スキャン</strong>：カメラ撮影・バーコード読み取りで食材を自動認識・登録。</li>
+          <li><strong>レシート読み取り</strong>：買い物後のレシートを撮影し、食材を一括登録。</li>
+          <li><strong>在庫管理</strong>：食材名・数量・カテゴリ・賞味期限・保管場所を一元管理。</li>
+          <li><strong>AI レシピ提案</strong>：冷蔵庫の在庫をもとに最適なレシピを自動生成。栄養バランス（PFC）も表示。</li>
+          <li><strong>買い物リスト</strong>：レシピから不足食材を自動提案。手動追加も可能。</li>
+          <li><strong>賞味期限通知</strong>：期限が近い食材をプッシュ通知でお知らせし、フードロスを防止。</li>
+          <li><strong>音声入力</strong>：ハンズフリーで食材を登録。</li>
+          <li><strong>献立作成</strong>：数日分の食事計画を在庫ベースで立案。</li>
+        </ul>
+
+        <h2>AI の活用</h2>
+        <ul>
+          <li>Google Gemini API で食材画像を解析し、品名・カテゴリを自動判定。</li>
+          <li>在庫状況に応じたレシピ生成と栄養バランスの算出。</li>
+          <li>ユーザーがオプトインで食材画像を提供 → 独自モデルの精度向上に活用。</li>
+        </ul>
+
+        <h2>技術スタック</h2>
+        <ul>
+          <li>Flutter（Material 3）/ Riverpod</li>
+          <li>Firebase（Auth / Firestore / Cloud Functions / Messaging / Storage / App Check）</li>
+          <li>Google Gemini API / ML Kit / Vertex AI（食材認識・レシピ生成）</li>
+          <li>RevenueCat（サブスクリプション）/ Google AdMob（広告）</li>
+        </ul>
+
+        <div class="cta cta-green">
+          <strong>冷蔵庫の食材を、ムダなくおいしく。</strong><br />
+          Rezo で毎日の料理をもっとスマートに。
+        </div>
+      </section>
+
+      <!-- ═══════════════════════════════════════════
+           特定商取引法に基づく表記
+           ═══════════════════════════════════════════ -->
+      <section class="legal-card">
+        <h2 style="border-left: 6px solid #6366f1; padding-left: 12px; margin-top: 0;">特定商取引法に基づく表記</h2>
+        <div class="legal-box">
+          <p><strong>販売事業者名：</strong>戸田 次俊（個人事業主）</p>
+          <p><strong>所在地：</strong>東京都江戸川区中葛西７−４−１８</p>
+          <p><strong>メールアドレス：</strong>orubisu.io3@gmail.com</p>
+          <p><strong>提供するサービス：</strong></p>
+          <ul style="margin-top: 0;">
+            <li>FamSync（Family Schedule App 追加機能の月額サブスクリプション／ファミリープラン 月額 480円）</li>
+            <li>Rezo プレミアム（Rezo 追加機能のサブスクリプション／アプリ内の購入画面に表示）</li>
+          </ul>
+          <p><strong>販売価格：</strong>各アプリ内の購入画面に表示</p>
+          <p><strong>支払方法：</strong>クレジットカード（Stripe決済）、App Store / Google Play 決済</p>
+          <p><strong>支払時期：</strong>購入時に即時決済</p>
+          <p><strong>サービス提供時期：</strong>購入後すぐ利用可能</p>
+          <p><strong>返品・キャンセル：</strong>性質上返金不可。サブスクはいつでも解約・無料プランへ変更可能。</p>
+          <p><strong>動作環境：</strong>iOS / Android（ストアの動作条件に準拠）</p>
+          <p><strong>追加の費用：</strong>通信料はお客様負担。</p>
+        </div>
+      </section>
 
     </main>
   </body>
