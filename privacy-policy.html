@@ -150,6 +150,7 @@
                 <li>Google Cloud Messaging / Firebase Cloud Messaging（プッシュ通知）</li>
                 <li>Google AdMob（広告配信）</li>
                 <li>Stripe / App Storeの決済システム（サブスクリプション決済）</li>
+                <li>Google Gemini API（AI機能：予定・タスクの自動抽出、AIチャット、要約 等）</li>
             </ul>
             <p>
                 法令に基づく場合を除き、ユーザーの同意なく第三者へ個人情報を販売・貸与することはありません。
@@ -157,6 +158,45 @@
         </div>
 
         <div class="card">
+                    <div class="card">
+            <h2>4-2. 第三者AIサービス（Google Gemini）の利用について</h2>
+            <div class="highlight">
+                <p>本アプリのAI機能は、Google LLC が提供する生成AIサービス <strong>Gemini API</strong> を使用します。以下にその詳細を説明します。</p>
+            </div>
+            <h3>対象となるAI機能</h3>
+            <ul>
+                <li>お便り（画像・テキスト）からの予定・タスクの自動抽出</li>
+                <li>AIチャット（相談・質問への回答生成）</li>
+                <li>コメントの要約、決定事項の抽出、チェックリストの生成</li>
+                <li>音声入力からの予定の自動作成</li>
+            </ul>
+            <h3>送信されるデータ</h3>
+            <ul>
+                <li>ユーザーが入力・アップロードした画像（お便り等）</li>
+                <li>入力または音声から変換したテキスト</li>
+                <li>予定・タスク・コメントの内容</li>
+            </ul>
+            <h3>送信先</h3>
+            <p>
+                上記データは、当方のサーバー（Google Firebase / Cloud Functions）を経由して、
+                Google LLC の生成AIサービス「<strong>Gemini API</strong>」へ送信されます。
+            </p>
+            <h3>ユーザーの同意</h3>
+            <p>
+                これらのデータは、アプリ内に表示される<strong>同意画面でユーザーが同意した場合にのみ</strong>送信されます。
+                同意しない限り、AIサービスへデータが送信されることはありません。
+            </p>
+            <h3>データの取り扱い</h3>
+            <ul>
+                <li>送信されたデータは、上記AI機能の処理のためにのみ利用されます。</li>
+                <li>Google はこれらのデータを自社の生成AIモデルの学習には使用しません（Gemini API のデータ利用条件に準拠）。</li>
+            </ul>
+            <p>
+                詳しくは
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google プライバシーポリシー</a> および
+                <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Gemini API 利用条件</a> をご覧ください。
+            </p>
+        </div>
             <h2>5. データの保存期間</h2>
             <p>
                 ユーザーのデータは、アカウントが有効である期間および法令上必要な期間に限り保存します。
